@@ -18,3 +18,10 @@ if (numberA < numberB)
     System.Console.WriteLine($"Большее число: {max}");
     System.Console.WriteLine($"Наименьшее число: {min}");
 }
+else
+{
+    min = numberB;
+    max = numberA;
+    System.Console.WriteLine($"Большее число: {max}");
+    System.Console.WriteLine($"Наименьшее число: {min}");
+}
