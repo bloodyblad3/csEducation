@@ -12,5 +12,5 @@ while (count <= number)
     {
         System.Console.WriteLine(count);
     }
-    count++;
+    count+=2;
 }
