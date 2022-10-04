@@ -6,4 +6,4 @@
 
 int number = new Random().Next(100, 999);
 System.Console.WriteLine(number);
-System.Console.WriteLine($"{(number/100) % 10}{(number/1) % 10}");
+System.Console.WriteLine($"{(number/100) % 10}{number % 10}");
