@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задача 2: Напишите программу, которая выводит случайное трёхзначное число и удаляет вторую цифру этого числа. Не использовать строки для расчета.
+
+// 456 -> 46
+// 782 -> 72
+// 918 -> 98
+
+int number = new Random().Next(100, 999);
+System.Console.WriteLine(number);
+System.Console.WriteLine($"{(number/100) % 10}{(number/1) % 10}");
