@@ -13,11 +13,11 @@ void CheckTheDayOfTheWeek(int number)
     {
         System.Console.WriteLine("да");
     }
-    if (number < 1 || number > 7)
+    else if (number < 1 || number > 7)
     {
         System.Console.WriteLine("Такого дня недели не существует!");
     }
-    if (number < 6) // знаю что можно через else, но почему-то выводило да-нет при вводе числа 6 или 7, поэтому заменил на конкретное условие
+    else
     {
         System.Console.WriteLine("нет");
     }
