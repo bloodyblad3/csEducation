@@ -24,12 +24,12 @@ bool IsPolyndrom(int num)
             int dig = num % 10;
             reversed = reversed * 10 + dig;
             num = num / 10;
-            if (temp == reversed)
+        }
+        if (temp == reversed)
             {
                 return true;
             }
             return false;
-        }
     }
     return false;
 }
