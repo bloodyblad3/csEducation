@@ -27,18 +27,14 @@ bool IsPolyndrom(int num)
         }
         if (temp == reversed)
             {
+                System.Console.WriteLine("да");
                 return true;
             }
+            System.Console.WriteLine("нет");
             return false;
     }
+    System.Console.WriteLine("Введено не пятизначное число");
     return false;
 }
 
-if (IsPolyndrom(number))
-{
-    System.Console.WriteLine("да");
-}
-else
-{
-    System.Console.WriteLine("Введено не пятизначное число, либо оно не является полиндромом");
-}
+IsPolyndrom(number);
