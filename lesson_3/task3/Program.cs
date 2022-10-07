@@ -3,15 +3,16 @@
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-double Prompt(string message)
+int Prompt(string message)
 {
     Console.Write(message);
     int number = Convert.ToInt32(Console.ReadLine());
     return number;
 }
 
-double number = Prompt("Введите число: ");
-for (int i = 0; i <= number; i++)
+int number = Prompt("Введите число: ");
+
+for (int i = 1; i <= number; i++)
 {
-    System.Console.Write($"number -> {Math.Pow}");
+    System.Console.WriteLine($"{number} -> {Math.Pow(i, 3)}");
 }
