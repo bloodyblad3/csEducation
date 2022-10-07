@@ -17,7 +17,7 @@ int reversed = 0;
 
 bool IsPolyndrom(int num)
 {
-    if (num >= 10000 && num <= 100000)
+    if (num >= 10000 && num <= 99999)
     {
         while (num > 0)
         {
