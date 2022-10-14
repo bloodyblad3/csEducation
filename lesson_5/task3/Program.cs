@@ -4,10 +4,9 @@
 int[] CreateArray(int len, int minLimit, int maxLimit)
 {
     int[] array = new int[len];
-    Random rnd = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rnd.Next(minLimit, maxLimit + 1);
+        array[i] = new Random().Next(minLimit, maxLimit + 1);
     }
     return array;
 }
