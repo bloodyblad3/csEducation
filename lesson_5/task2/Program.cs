@@ -24,19 +24,16 @@ void PrintArray(int[] array)
     System.Console.WriteLine();
 }
 
-int SumOddNum(int[] array)
+int SumOdd(int[] array)
 {
     int sum = 0;
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i += 2)
     {
-        if (array[i] % 2 != 0)
-        {
-            sum += array[i];
-        }
+        sum += array[i];
     }
     return sum;
 }
 
 int[] array = CreateArray(10, 0, 20);
 PrintArray(array);
-System.Console.WriteLine($"Сумма нечетных чисел в массиве: {SumOddNum(array)}");
+System.Console.WriteLine($"Сумма нечетных чисел в массиве: {SumOdd(array)}");
