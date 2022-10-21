@@ -15,7 +15,7 @@
     return (line, column);
 }
 
-int[,] CreateArray(int lines, int columns)
+int[,] CreateArray(int lines = 5, int columns = 5)
 {
     int[,] array = new int[lines, columns];
     Random random = new Random();
@@ -56,7 +56,7 @@ int SearchNumber(int[,] array, (int line, int column)tuple)
     return 0;
 }
 
-int[,] array = CreateArray(4, 5);
+int[,] array = CreateArray();
 PrintArray(array);
 (int line, int column) = PositionsFromUser();
 int number = SearchNumber(array, (line, column));
