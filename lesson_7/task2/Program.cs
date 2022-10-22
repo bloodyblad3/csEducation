@@ -41,27 +41,22 @@ void PrintArray(int[,] array)
     }
 }
 
-int SearchNumber(int[,] array, (int line, int column)tuple)
+int SearchNumber(int[,] array, (int line, int column) tuple)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    if (tuple.line < 0 || tuple.line >= array.GetLength(0) || tuple.column < 0 || tuple.column >= array.GetLength(1))
     {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (i == tuple.line && j == tuple.column)
-            {
-                return array[i, j];
-            }
-        }
+        return -1;
     }
-    return 0;
+
+    return array[tuple.line, tuple.column];
 }
 
 int[,] array = CreateArray();
 PrintArray(array);
 (int line, int column) = PositionsFromUser();
 int number = SearchNumber(array, (line, column));
-if (number == 0)
+if (number == -1)
 {
     System.Console.WriteLine("Такой позиции в массиве не существует!");
 }
-else {System.Console.WriteLine($"В позиции [{line}; {column}] было найдено число > {number}");}
+else { System.Console.WriteLine($"В позиции [{line}; {column}] было найдено число > {number}"); }
