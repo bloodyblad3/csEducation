@@ -2,3 +2,23 @@
 
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
+
+int InputNumber(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+void PrintNumbers(int number)
+{
+    if (number <= 0)
+    {
+        return;
+    }
+
+    System.Console.Write(number + " ");
+    PrintNumbers(number - 1);
+}
+
+int num = InputNumber("Введите число: ");
+PrintNumbers(num);
