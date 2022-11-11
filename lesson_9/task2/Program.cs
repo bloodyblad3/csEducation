@@ -9,18 +9,18 @@ int InputNumber(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int SumNum(int m, int n)
+void PrintSum(int m, int n, int sum)
 {
-    int start = m;
-    int end = n;
-    if (m > n)
+    sum = sum + n;
+    if (n <= m)
     {
-        start = n;
-        end = m;
+        Console.Write(sum);
+        return;
     }
-    return (end + start) * (end - start + 1) / 2;
+    PrintSum(m, n - 1, sum);
 }
 
 int m = InputNumber("Введите число M: ");
 int n = InputNumber("Введите число N: ");
-System.Console.WriteLine($"Сумма в промежутке > {SumNum(m, n)}");
+System.Console.Write($"Сумма чисел в промежутке > ");
+PrintSum(m, n, 0);
